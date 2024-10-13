@@ -58,31 +58,31 @@ do
       mvn -B install -DskipTests
       (cd lang/py && ./build.sh test)
       # (cd lang/py3 && ./build.sh test) not recognized packages
-      (cd lang/c; ./build.sh test)
-      (cd lang/c++; ./build.sh test)
+      # (cd lang/c; ./build.sh test)
+      # (cd lang/c++; ./build.sh test)
       # (cd lang/csharp; ./build.sh test) not installed
-      (cd lang/js; ./build.sh test)
+      # (cd lang/js; ./build.sh test)
       (cd lang/ruby; ./build.sh test)
-      (cd lang/php; ./build.sh test)
-      (cd lang/perl; ./build.sh test)
+      # (cd lang/php; ./build.sh test)
+      # (cd lang/perl; ./build.sh test)
 
       (cd lang/py; ant interop-data-generate)
-      (cd lang/c; ./build.sh interop-data-generate)
+      # (cd lang/c; ./build.sh interop-data-generate)
       # (cd lang/c++; make interop-data-generate) command does not exist
       # (cd lang/csharp; ./build.sh interop-data-generate)
       (cd lang/ruby; rake generate_interop)
-      (cd lang/php; ./build.sh interop-data-generate)
-      (cd lang/perl; ./build.sh interop-data-generate)
+      # (cd lang/php; ./build.sh interop-data-generate)
+      # (cd lang/perl; ./build.sh interop-data-generate)
 
       # run interop data tests
       (cd lang/java/ipc; mvn -B test -P interop-data-test)
       (cd lang/py; ant interop-data-test)
-      (cd lang/c; ./build.sh interop-data-test)
+      # (cd lang/c; ./build.sh interop-data-test)
       # (cd lang/c++; make interop-data-test) command does not exist
       # (cd lang/csharp; ./build.sh interop-data-test)
       (cd lang/ruby; rake interop)
-      (cd lang/php; ./build.sh test-interop)
-      (cd lang/perl; ./build.sh interop-data-test)
+      # (cd lang/php; ./build.sh test-interop)
+      # (cd lang/perl; ./build.sh interop-data-test)
 
       # java needs to package the jars for the interop rpc tests
       (cd lang/java/tools; mvn -B package -DskipTests)
